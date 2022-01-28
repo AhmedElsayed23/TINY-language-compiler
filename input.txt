@@ -1,0 +1,90 @@
+{ Sample program
+  in TINY language
+  test cases
+  to handle negative number, i used subtraction operation (0-x)
+}
+
+{output: 1 2 3 4 5}
+for i from 1 to 5 inc 1 {positive increments}
+startfor
+    write i
+endfor;
+
+{output: 1 0 -1 -2 -3 -4 -4}
+for i from 1 to 0-5 inc 0-1 {negative increments}
+startfor
+    write i
+endfor;
+
+{output: 7 10}
+for i from 1+6 to 5+6 inc 1+2 {math expr}
+startfor
+    write i
+endfor;
+
+sum := 0;
+for i from 9 to 0-9 inc 0-1 {math expr} {program to sum positive numbers}
+startfor
+    sum := sum + i;
+    if i<1 then break end {break}
+endfor;
+write sum; {output: 45}
+
+sum := 0;
+for i from 1 to 16 inc 1
+startfor
+    sum := sum + i;
+    if i=10 then break end {break}
+endfor;
+write sum; {output: 55}
+
+{break; will throw exception because outside loop}
+
+{output: 1 2 3 2 4 6 3 6 9}
+for i from 1 to 3 inc 1 {nested loops, 2 loops}
+startfor
+    for j from 1 to 3 inc 1
+    startfor
+        write j*i
+    endfor
+endfor;
+
+{output: 3 6 9 6 12 18 9 18 27}
+for i from 1 to 3 inc 1 {nested loops, 3 loops}
+startfor
+    for j from 1 to 3 inc 1
+    startfor
+        for k from 1 to 3 inc 1
+        startfor
+            if i=3 then write j*i*k end {break}
+        endfor
+    endfor
+endfor;
+
+{example sums all odd numbers starting from 1 to the minimum of 11 and n}
+sum:=0;
+for i from 1 to 20 inc 2
+startfor
+    sum := sum + i;
+    if i=11 then break end
+endfor;
+write sum; {36}
+
+{program to find factorial of a number}
+fact := 1;
+read n;
+for i from 1 to n inc 1
+startfor
+    fact := fact * i
+endfor;
+write fact; {factorial of a number}
+
+{Find power of any number using for loop}
+num := 1;
+read base;
+read ex;
+for i from 1 to ex inc 1
+startfor
+    num := num * base
+endfor;
+write num {power}
