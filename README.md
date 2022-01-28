@@ -5,6 +5,7 @@
     <li><a href="#TINY-language-compiler">TINY language compiler</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#test-cases">Test cases</a></li>
+    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 
@@ -67,4 +68,8 @@ You can write all the test case into input.txt file
     write fact {output factorial}
   end
   ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Credits
+This project is built with my college mates and my professor Dr. Amin Allam with supervision
 <p align="right">(<a href="#top">back to top</a>)</p>
